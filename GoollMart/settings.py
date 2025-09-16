@@ -32,7 +32,9 @@ PRODUCTION = os.getenv('PRODUCTION', 'False').lower() == 'true'
 DEBUG = True
 
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", "naomi-kyla-goollmart.pbp.cs.ui.ac.id"]
-
+CSRF_TRUSTED_ORIGINS = [
+    "https://naomi-kyla-goollmart.pbp.cs.ui.ac.id"
+]
 
 # Application definition
 
@@ -43,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     'main',
 ]
 
@@ -61,7 +64,7 @@ ROOT_URLCONF = 'GoollMart.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

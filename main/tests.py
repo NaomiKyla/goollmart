@@ -7,11 +7,11 @@ class MainViewTest(TestCase):
 
     def test_main_using_main_template(self):
         response = Client().get('/')
-        self.assertTemplateUsed(response, 'main.html')  # sesuai path template kamu
+        self.assertTemplateUsed(response, 'main.html')  
 
     def test_context_data(self):
         response = Client().get('/')
         self.assertContains(response, "GoollMart")  
-        self.assertContains(response, "2406434102")  # NPM kamu
-        self.assertContains(response, "Naomi Kyla Zahra Siregar")  # Nama kamu
-        self.assertContains(response, "PBP B")  # Kelas kamu
+        self.assertContains(response, "2406434102")  # NPM 
+        self.assertContains(response, "Naomi Kyla Zahra Siregar")  # Nama 
+        self.assertContains(response, "PBP B")  # Kelas 
