@@ -60,6 +60,7 @@ Menurut saya Django cocok dipakai sebagai framework pembelajaran karena:
 
 **6. Apakah ada feedback untuk asisten dosen tutorial 1 yang telah kamu kerjakan sebelumnya?**
 Menurut saya, penjelasan asisten dosen pada tutorial 1 sangat jelas, terutama melalui tulisan tutorial yang disediakan. Walaupun kegiatan tutorial 1 saat itu dilaksanakan secara online dari rumah masing-masing, saya tetap bisa mengikuti dan memahami step-by-step yang diberikan dengan baik. Penjelasannya runtut, detail, dan mudah dipahami, sehingga tidak membingungkan.
+<<<<<<< HEAD
 
 ##**TUGAS 3 "Implementasi Form dan Data Delivery pada Django"**##
 
@@ -112,7 +113,6 @@ Menurut saya, tutorial 2 dari asdos sangat membantu dan penjelasannya jelas sehi
 <img width="1470" height="956" alt="Screenshot 2025-09-16 at 22 34 12" src="https://github.com/user-attachments/assets/5befa09e-dada-4a49-a9b1-41119603a1bf" />
 
 <img width="1470" height="956" alt="Screenshot 2025-09-16 at 22 34 46" src="https://github.com/user-attachments/assets/9c095392-c4d3-4384-8cc1-9bd350847f4b" />
-
 
 
 
