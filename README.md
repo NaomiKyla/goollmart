@@ -5,7 +5,7 @@ Kelas : PBP - B
 ##**TUGAS 2 "IMPLEMENTASI MODEL-VIEW-TEMPLATE (MVT) PADA DJANGO"**##
 
 Nama Project: goollmart
-Link Deployment PWS: https://pbp.cs.ui.ac.id/naomi.kyla/goollmart
+Link Deployment PWS: https://naomi-kyla-goollmart.pbp.cs.ui.ac.id
 
 **1. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).**
 Berikut implementasi checklist secara step-by-step.
@@ -63,9 +63,6 @@ Menurut saya, penjelasan asisten dosen pada tutorial 1 sangat jelas, terutama me
 <<<<<<< HEAD
 
 ##**TUGAS 3 "Implementasi Form dan Data Delivery pada Django"**##
-
-Nama Project: goollmart
-Link Deployment PWS: https://pbp.cs.ui.ac.id/naomi.kyla/goollmart
 
 **1. Mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform?**
 Data delivery penting karena web bekerja dengan komunikasi antara client (browser) dan server melalui HTTP request–response. Platform butuh cara untuk mengirim dan menerima data agar bisa menampilkan informasi dinamis, bukan sekadar HTML statis.
