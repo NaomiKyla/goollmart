@@ -2,7 +2,7 @@ Nama  : Naomi Kyla Zahra Siregar
 NPM   : 2406434102
 Kelas : PBP - B
 
-##**TUGAS 2 "IMPLEMENTASI MODEL-VIEW-TEMPLATE (MVT) PADA DJANGO"**##
+#**TUGAS 2 "IMPLEMENTASI MODEL-VIEW-TEMPLATE (MVT) PADA DJANGO"**#
 
 Nama Project: goollmart
 Link Deployment PWS: https://naomi-kyla-goollmart.pbp.cs.ui.ac.id
@@ -62,7 +62,7 @@ Menurut saya Django cocok dipakai sebagai framework pembelajaran karena:
 Menurut saya, penjelasan asisten dosen pada tutorial 1 sangat jelas, terutama melalui tulisan tutorial yang disediakan. Walaupun kegiatan tutorial 1 saat itu dilaksanakan secara online dari rumah masing-masing, saya tetap bisa mengikuti dan memahami step-by-step yang diberikan dengan baik. Penjelasannya runtut, detail, dan mudah dipahami, sehingga tidak membingungkan.
 <<<<<<< HEAD
 
-##**TUGAS 3 "Implementasi Form dan Data Delivery pada Django"**##
+#**TUGAS 3 "Implementasi Form dan Data Delivery pada Django"**#
 
 **1. Mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform?**
 Data delivery penting karena web bekerja dengan komunikasi antara client (browser) dan server melalui HTTP request–response. Platform butuh cara untuk mengirim dan menerima data agar bisa menampilkan informasi dinamis, bukan sekadar HTML statis.
@@ -110,6 +110,9 @@ Menurut saya, tutorial 2 dari asdos sangat membantu dan penjelasannya jelas sehi
 <img width="1470" height="956" alt="Screenshot 2025-09-16 at 22 34 12" src="https://github.com/user-attachments/assets/5befa09e-dada-4a49-a9b1-41119603a1bf" />
 
 <img width="1470" height="956" alt="Screenshot 2025-09-16 at 22 34 46" src="https://github.com/user-attachments/assets/9c095392-c4d3-4384-8cc1-9bd350847f4b" />
+
+
+
 
 
 
