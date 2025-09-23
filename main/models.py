@@ -1,5 +1,6 @@
 import uuid
 from django.db import models
+from django.contrib.auth.models import User
 
 class Product(models.Model):
 
@@ -14,7 +15,8 @@ class Product(models.Model):
     is_featured = models.BooleanField(default=False) # Menandai produk favorit/unggulan
     created_at = models.DateTimeField(auto_now_add=True) # Tanggal dan waktu produk ditambahkan (otomatis diisi)
     views = models.IntegerField(default=0) # Jumlah view/product dilihat oleh user
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True) # Tugas 4
 
-    def __str__(self):
-        return self.name
+    def __str__(self): 
+        return f"{self.name} - {self.stock}"
 

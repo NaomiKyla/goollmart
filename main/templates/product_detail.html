@@ -37,4 +37,12 @@
 
 <p>{{ product.description }}</p>
 <p><b>Price:</b> Rp {{ product.price|intcomma }}</p>
+
+<!-- Tambahkan kode ini -->
+{% if product.user %}
+    <p><b>Author:</b> {{ product.user.username }}</p>
+{% else %}
+    <p><b>Author:</b> Anonymous</p>
+{% endif %}
+
 {% endblock content %}

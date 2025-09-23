@@ -31,6 +31,20 @@
   <a href="{% url 'main:create_product' %}" class="btn">+ Add Product</a>
 </div>
 
+<a href="{% url 'main:logout' %}">
+  <button>Logout</button>
+</a>
+
+<h5>Sesi terakhir login: {{ last_login }}</h5>
+<hr>
+<!-- Tambahkan kode ini -->
+<a href="?filter=all">
+    <button type="button">All Products</button>
+</a>
+<a href="?filter=my">
+    <button type="button">My Products</button>
+</a> 
+
 <!-- Daftar produk -->
 {% if not products %}
   <p>Belum ada produk.</p>
