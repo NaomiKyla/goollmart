@@ -248,10 +248,13 @@ Halaman-halaman ini didesain menggunakan CSS Flexbox dan Grid Layout agar tampil
 Untuk menampilkan daftar produk, saya membuat file card_product.html dengan desain card yang menarik. Setiap produk ditampilkan dengan gambar, nama, harga, deskripsi, serta tombol Edit dan Delete. Desain ini menggunakan CSS Flexbox untuk menata tombol secara horizontal dan membuat tampilan lebih interaktif.
 **4. Membuat navbar yang responsif**
 Navbar dibuat menggunakan Flexbox agar elemen di dalamnya tersusun rapi dan dapat menyesuaikan ukuran layar. Dengan Flexbox, navbar bisa menyesuaikan posisi logo dan menu secara responsif pada berbagai ukuran layar.
+
 **Kondisi navbar untuk versi mobile:**
 <img width="401" height="66" alt="Screenshot 2025-09-30 at 18 54 45" src="https://github.com/user-attachments/assets/888c6708-1f7e-40a1-87a3-e77228afaa85" />
+
 **Ketika tombol hamburger diklik:**
-![Screenshot 2025-09-30 at 17 13 18](https://github.com/user-attachments/assets/711d09f1-52ab-4ec4-9eb2-c8feca1d12ed)
+![Screenshot 2025-09-30 at 17 13 18](https://github.com/user-attachments/assets/711d09f1-52ab-4ec4-9eb2-c8feca1d12ed) />
+
 **Kondisi navbar untuk versi desktop:**
 <img width="1405" height="179" alt="Screenshot 2025-09-30 at 18 50 47" src="https://github.com/user-attachments/assets/bcb34554-1429-495c-a728-b1d84976b3b1" />
 
