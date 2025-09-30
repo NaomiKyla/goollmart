@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block meta %}
-<title>Create Product - GoollMart</title>
+<title>Edit Product - GoollMart</title>
 {% endblock meta %}
 
 {% block content %}
@@ -11,7 +11,7 @@
     <!-- Back Navigation -->
     <div class="mb-6">
       <a href="{% url 'main:show_main' %}" 
-         class="text-gray-600 hover:text-gray-900 font-medium transition-colors flex items-center gap-1">
+         class="text-gray-700 hover:text-gray-900 font-medium transition-colors flex items-center gap-1">
         ← Back to Products
       </a>
     </div>
@@ -20,30 +20,20 @@
     <div class="bg-white rounded-xl shadow-lg p-6 sm:p-8 border border-gray-200">
       <div class="mb-8 text-center">
         <h1 class="text-3xl font-bold text-gray-900 mb-2">
-          Add New Product
+          Edit Product
         </h1>
-        <p class="text-gray-600">
-          List your product on <span class="text-gray-900 font-semibold">GoollMart</span> and reach more buyers.
-        </p>
+        <p class="text-gray-600">Update your product details and keep your shop shining.</p>
       </div>
       
       <form method="POST" class="space-y-6">
         {% csrf_token %}
-        
         {% for field in form %}
           <div>
             <label for="{{ field.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-2">
               {{ field.label }}
             </label>
             <div class="w-full">
-              {% if field.field.widget.input_type == "checkbox" %}
-                <label class="inline-flex items-center space-x-2">
-                  {{ field }}
-                  <span class="text-gray-700">{{ field.label }}</span>
-                </label>
-              {% else %}
-                {{ field }}
-              {% endif %}
+              {{ field }}
             </div>
             {% if field.help_text %}
               <p class="mt-1 text-sm text-gray-500">{{ field.help_text }}</p>
@@ -55,16 +45,13 @@
         {% endfor %}
         
         <div class="flex flex-col sm:flex-row gap-4 pt-6 border-t border-gray-200">
-          <!-- Cancel -->
           <a href="{% url 'main:show_main' %}" 
              class="order-2 sm:order-1 px-6 py-3 border border-gray-300 text-gray-700 rounded-md font-medium hover:bg-gray-100 transition-colors text-center">
             Cancel
           </a>
-          
-          <!-- Publish -->
           <button type="submit" 
                   class="order-1 sm:order-2 flex-1 bg-gray-900 text-white px-6 py-3 rounded-md font-semibold hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 transition">
-            Publish Product
+            Save Changes
           </button>
         </div>
       </form>

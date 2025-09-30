@@ -1,0 +1,69 @@
+{% load static %}
+{% load humanize %}
+{% now "Y-m-d" as today %}
+
+<article class="bg-white rounded-xl shadow hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 overflow-hidden flex flex-col relative transform">
+
+  <!-- Badge FEATURED -->
+  {% if product.is_featured %}
+    <div class="absolute top-2 right-2 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded z-10">
+      FEATURED
+    </div>
+  {% endif %}
+
+  <!-- Thumbnail -->
+  <div class="aspect-[16/9] relative overflow-hidden bg-gray-100">
+    {% if product.thumbnail %}
+      <img src="{{ product.thumbnail }}" alt="{{ product.name }}" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+    {% else %}
+      <div class="w-full h-full flex items-center justify-center text-gray-400">
+        No Image
+      </div>
+    {% endif %}
+  </div>
+
+  <!-- Content -->
+  <div class="p-5 flex flex-col flex-grow">
+    <h3 class="text-lg font-semibold text-gray-900 mb-1 line-clamp-2 leading-tight">
+      <a href="{% url 'main:show_product' product.id %}" 
+         class="transition-colors hover:text-gray-900 hover:underline hover:decoration-2 hover:underline-offset-2">
+        {{ product.name|upper }}
+      </a>
+    </h3>
+
+    <!-- Price & Category -->
+    <p class="text-gray-800 font-bold mb-2">Rp {{ product.price|intcomma }}</p>
+    <p class="text-sm text-gray-500 mb-3">Category: {{ product.category }}</p>
+
+    <p class="text-gray-600 text-sm leading-relaxed line-clamp-3 mb-4">
+      {{ product.description|truncatewords:20 }}
+    </p>
+
+    <!-- Action Buttons -->
+    <div class="mt-auto pt-3 border-t border-gray-200 flex justify-between items-center">
+      {% if user.is_authenticated and product.user == user %}
+        <div class="flex space-x-2">
+          <!-- Edit = biru -->
+          <a href="{% url 'main:edit_product' product.id %}" class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded transition-colors">
+            Edit
+          </a>
+          <!-- Delete = merah -->
+          <a href="{% url 'main:delete_product' product.id %}" class="px-3 py-1 bg-red-600 hover:bg-red-700 text-white text-sm rounded transition-colors">
+            Delete
+          </a>
+        </div>
+        <a href="{% url 'main:show_product' product.id %}" class="text-gray-700 hover:text-gray-900 font-semibold text-sm transition-colors">
+          View →
+        </a>
+      {% else %}
+        <a href="{% url 'main:show_product' product.id %}" class="px-4 py-2 bg-gray-900 hover:bg-gray-800 text-white text-sm rounded font-semibold transition-colors text-center w-full">
+          View Product
+        </a>
+      {% endif %}
+    </div>
+
+  </div>
+
+  <!-- Tipis garis abu-abu atas -->
+  <div class="absolute top-0 left-0 w-full h-0.5 bg-gray-800"></div>
+</article>

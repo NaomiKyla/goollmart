@@ -37,17 +37,16 @@ def show_main(request):
 def create_product(request):
     form = ProductForm(request.POST or None)
 
-    if form.is_valid() and request.method == 'POST':
-        product = form.save(commit=False)   
-        product.user = request.user         
-        product.save()                      
-        return redirect('main:show_main')
+    if request.method == 'POST':
+        if form.is_valid():
+            product = form.save(commit=False)
+            product.user = request.user
+            product.save()
+            return redirect('main:show_main')
+        else:
+            print("Form errors:", form.errors)  # Debug di terminal
 
-    context = {
-        'form': form
-    }
-
-    return render(request, "create_product.html", context)
+    return render(request, "create_product.html", {'form': form})
 
 # Menampilkan halaman detail produk tertentu, sekaligus tambah view count
 @login_required(login_url='/login')
@@ -121,3 +120,20 @@ def logout_user(request):
     response = HttpResponseRedirect(reverse('main:login'))
     response.delete_cookie('last_login')
     return response
+
+def edit_product(request, id): # Tugas 5
+    product = get_object_or_404(Product, pk=id)
+
+    form = ProductForm(request.POST or None, instance=product)
+    if request.method == "POST" and form.is_valid():
+        form.save()
+        return redirect('main:show_main')
+
+    return render(request, "edit_product.html", {'form': form})
+
+def delete_product(request, id):
+    product = get_object_or_404(Product, pk=id)
+    if request.user == product.user:
+        product.delete()
+
+    return redirect(reverse('main:show_main'))

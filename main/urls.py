@@ -6,6 +6,9 @@ from main.views import (
 from main.views import register # Tugas 4
 from main.views import login_user
 from main.views import logout_user
+from main.views import edit_product #Tugas 5
+from main.views import delete_product
+
 
 app_name = 'main'
 
@@ -22,4 +25,6 @@ urlpatterns = [
     path('register/', register, name='register'), # Tugas 4
     path('login/', login_user, name='login'),
     path('logout/', logout_user, name='logout'),
+    path('product/<uuid:id>/edit', edit_product, name='edit_product'), # Tugas 5
+    path('product/<uuid:id>/delete', delete_product, name='delete_product'),
 ]
